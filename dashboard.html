@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>School Complaints Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <nav>
+    <div>Dashboard</div>
+    <div>
+      <a href="#">Home</a>
+      <a href="#">Dashboard</a>
+      <a href="#">About</a>
+    </div>
+  </nav>
+  <main>
+    <h2>Complaints per Zone</h2>
+    <canvas id="dataChart" width="600" height="300"></canvas>
+
+    <h3>Search Entries</h3>
+    <input type="text" id="searchInput" placeholder="Search by any field...">
+
+    <h3>Data Table (Duplicates Highlighted)</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Serial</th>
+          <th>Zone</th>
+          <th>School ID</th>
+          <th>Date</th>
+          <th>Complaints</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="dataTable"></tbody>
+    </table>
+
+    <div id="paginationControls">
+      <button id="prevPage">Previous</button>
+      <span id="pageInfo"></span>
+      <button id="nextPage">Next</button>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
